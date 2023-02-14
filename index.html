@@ -1,0 +1,1382 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <title>打火机与公主裙</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+  <script src="./js/three.min.js"></script>
+  <!-- <script src='./js/MeshSurfaceSampler.js'></script> -->
+  <script src="./js/TrackballControls.js"></script>
+  <script src="./js/simplex-noise.js"></script>
+  <script src="./js/OBJLoader.js"></script>
+  <script src="./js/gsap.min.js"></script>
+  <script src="./js/script.js"></script><canvas width="1920" height="1874" style="display: block; width: 1920px; height: 1874px; touch-action: none;"></canvas>
+
+
+  <div id="main"><heart style="left: 1311px; top: 921px;"></heart><heart style="left: 551px; top: 197px;"></heart><heart style="left: 9px; top: 736px;"></heart><heart style="left: 293px; top: 164px;"></heart><heart style="left: 96px; top: 528px;"></heart><heart style="left: 647px; top: 1456px;"></heart><heart style="left: 194px; top: 1182px;"></heart><heart style="left: 1308px; top: 764px;"></heart><heart style="left: 1914px; top: 1419px;"></heart><heart style="left: 681px; top: 72px;"></heart><heart style="left: 872px; top: 725px;"></heart><heart style="left: 1415px; top: 88px;"></heart><heart style="left: 754px; top: 1348px;"></heart><heart style="left: 148px; top: 442px;"></heart><heart style="left: 1310px; top: 976px;"></heart><heart style="left: 1078px; top: 6px;"></heart><heart style="left: 1567px; top: 852px;"></heart><heart style="left: 375px; top: 132px;"></heart><heart style="left: 1182px; top: 998px;"></heart><heart style="left: 1466px; top: 818px;"></heart><heart style="left: 1306px; top: 46px;"></heart><heart style="left: 263px; top: 344px;"></heart><heart style="left: 1097px; top: 1365px;"></heart><heart style="left: 1452px; top: 1044px;"></heart><heart style="left: 542px; top: 1769px;"></heart><heart style="left: 563px; top: 710px;"></heart><heart style="left: 762px; top: 1279px;"></heart><heart style="left: 391px; top: 628px;"></heart><heart style="left: 1864px; top: 172px;"></heart><heart style="left: 1158px; top: 33px;"></heart><heart style="left: 238px; top: 228px;"></heart><heart style="left: 1340px; top: 888px;"></heart><heart style="left: 1182px; top: 991px;"></heart><heart style="left: 1340px; top: 559px;"></heart><heart style="left: 1073px; top: 990px;"></heart><heart style="left: 52px; top: 1777px;"></heart><heart style="left: 918px; top: 1184px;"></heart><heart style="left: 409px; top: 1280px;"></heart><heart style="left: 578px; top: 171px;"></heart><heart style="left: 313px; top: 885px;"></heart><heart style="left: 67px; top: 1742px;"></heart><heart style="left: 1534px; top: 550px;"></heart><heart style="left: 1570px; top: 1312px;"></heart><heart style="left: 49px; top: 1834px;"></heart><heart style="left: 959px; top: 781px;"></heart><heart style="left: 925px; top: 1267px;"></heart><heart style="left: 25px; top: 1740px;"></heart><heart style="left: 1072px; top: 1201px;"></heart><heart style="left: 353px; top: 882px;"></heart><heart style="left: 1441px; top: 1706px;"></heart><heart style="left: 1450px; top: 1641px;"></heart><heart style="left: 727px; top: 1219px;"></heart><heart style="left: 1541px; top: 898px;"></heart><heart style="left: 971px; top: 62px;"></heart><heart style="left: 266px; top: 1299px;"></heart><heart style="left: 1146px; top: 59px;"></heart><heart style="left: 877px; top: 1183px;"></heart><heart style="left: 142px; top: 444px;"></heart><heart style="left: 310px; top: 1192px;"></heart><heart style="left: 1775px; top: 712px;"></heart><heart style="left: 657px; top: 453px;"></heart><heart style="left: 400px; top: 498px;"></heart><heart style="left: 271px; top: 1349px;"></heart><heart style="left: 211px; top: 466px;"></heart><heart style="left: 1835px; top: 1239px;"></heart><heart style="left: 1121px; top: 1334px;"></heart><heart style="left: 984px; top: 70px;"></heart><heart style="left: 512px; top: 1847px;"></heart><heart style="left: 730px; top: 995px;"></heart><heart style="left: 1669px; top: 817px;"></heart><heart style="left: 1444px; top: 944px;"></heart><heart style="left: 402px; top: 494px;"></heart><heart style="left: 374px; top: 773px;"></heart><heart style="left: 84px; top: 1178px;"></heart><heart style="left: 390px; top: 651px;"></heart><heart style="left: 319px; top: 344px;"></heart><heart style="left: 438px; top: 1693px;"></heart><heart style="left: 1644px; top: 183px;"></heart><heart style="left: 485px; top: 306px;"></heart><heart style="left: 117px; top: 521px;"></heart><heart style="left: 1643px; top: 636px;"></heart><heart style="left: 809px; top: 1089px;"></heart><heart style="left: 266px; top: 1080px;"></heart><heart style="left: 1148px; top: 135px;"></heart><heart style="left: 991px; top: 163px;"></heart><heart style="left: 1866px; top: 1729px;"></heart><heart style="left: 528px; top: 867px;"></heart><heart style="left: 1542px; top: 297px;"></heart><heart style="left: 1694px; top: 1661px;"></heart><heart style="left: 1009px; top: 781px;"></heart><heart style="left: 1552px; top: 726px;"></heart><heart style="left: 1462px; top: 1066px;"></heart><heart style="left: 1534px; top: 1812px;"></heart><heart style="left: 737px; top: 1837px;"></heart><heart style="left: 259px; top: 231px;"></heart><heart style="left: 160px; top: 1058px;"></heart><heart style="left: 1634px; top: 1715px;"></heart><heart style="left: 562px; top: 73px;"></heart><heart style="left: 266px; top: 352px;"></heart><heart style="left: 156px; top: 1593px;"></heart><heart style="left: 613px; top: 1612px;"></heart><heart style="left: 611px; top: 753px;"></heart><heart style="left: 654px; top: 21px;"></heart><heart style="left: 1525px; top: 795px;"></heart><heart style="left: 1600px; top: 499px;"></heart><heart style="left: 1097px; top: 906px;"></heart><heart style="left: 1148px; top: 1179px;"></heart><heart style="left: 1173px; top: 1075px;"></heart><heart style="left: 1123px; top: 1342px;"></heart><heart style="left: 968px; top: 215px;"></heart><heart style="left: 896px; top: 784px;"></heart><heart style="left: 1821px; top: 1239px;"></heart><heart style="left: 906px; top: 168px;"></heart><heart style="left: 1421px; top: 894px;"></heart><heart style="left: 511px; top: 845px;"></heart><heart style="left: 17px; top: 39px;"></heart><heart style="left: 1117px; top: 849px;"></heart><heart style="left: 1843px; top: 1769px;"></heart><heart style="left: 902px; top: 317px;"></heart><heart style="left: 295px; top: 1400px;"></heart><heart style="left: 20px; top: 4px;"></heart><heart style="left: 1442px; top: 998px;"></heart><heart style="left: 1205px; top: 994px;"></heart><heart style="left: 786px; top: 1260px;"></heart><heart style="left: 1677px; top: 1781px;"></heart><heart style="left: 1163px; top: 1362px;"></heart><heart style="left: 286px; top: 1166px;"></heart><heart style="left: 295px; top: 1028px;"></heart><heart style="left: 633px; top: 135px;"></heart><heart style="left: 1360px; top: 1525px;"></heart><heart style="left: 1760px; top: 542px;"></heart><heart style="left: 1152px; top: 158px;"></heart><heart style="left: 1908px; top: 902px;"></heart><heart style="left: 1295px; top: 502px;"></heart><heart style="left: 1207px; top: 137px;"></heart><heart style="left: 1284px; top: 1394px;"></heart><heart style="left: 825px; top: 1316px;"></heart><heart style="left: 934px; top: 981px;"></heart><heart style="left: 1158px; top: 911px;"></heart><heart style="left: 842px; top: 368px;"></heart><heart style="left: 174px; top: 862px;"></heart><heart style="left: 864px; top: 1693px;"></heart><heart style="left: 1124px; top: 1660px;"></heart><heart style="left: 1717px; top: 720px;"></heart><heart style="left: 289px; top: 1189px;"></heart><heart style="left: 155px; top: 348px;"></heart><heart style="left: 149px; top: 871px;"></heart><heart style="left: 247px; top: 60px;"></heart><heart style="left: 788px; top: 820px;"></heart><heart style="left: 342px; top: 36px;"></heart><heart style="left: 239px; top: 695px;"></heart><heart style="left: 1764px; top: 1218px;"></heart><heart style="left: 1255px; top: 22px;"></heart><heart style="left: 1439px; top: 1184px;"></heart><heart style="left: 1891px; top: 1340px;"></heart><heart style="left: 166px; top: 130px;"></heart><heart style="left: 677px; top: 851px;"></heart><heart style="left: 1321px; top: 1478px;"></heart><heart style="left: 416px; top: 295px;"></heart><heart style="left: 1823px; top: 260px;"></heart><heart style="left: 601px; top: 506px;"></heart><heart style="left: 1745px; top: 509px;"></heart><heart style="left: 1415px; top: 1720px;"></heart><heart style="left: 709px; top: 299px;"></heart><heart style="left: 1616px; top: 236px;"></heart><heart style="left: 774px; top: 248px;"></heart><heart style="left: 511px; top: 1772px;"></heart><heart style="left: 853px; top: 1225px;"></heart><heart style="left: 1413px; top: 766px;"></heart><heart style="left: 422px; top: 1678px;"></heart><heart style="left: 1522px; top: 273px;"></heart><heart style="left: 1586px; top: 97px;"></heart><heart style="left: 377px; top: 996px;"></heart><heart style="left: 1274px; top: 649px;"></heart><heart style="left: 242px; top: 1751px;"></heart><heart style="left: 1409px; top: 895px;"></heart><heart style="left: 1446px; top: 1731px;"></heart><heart style="left: 1685px; top: 392px;"></heart><heart style="left: 1468px; top: 1518px;"></heart><heart style="left: 1247px; top: 410px;"></heart><heart style="left: 927px; top: 574px;"></heart><heart style="left: 1197px; top: 1307px;"></heart><heart style="left: 311px; top: 624px;"></heart><heart style="left: 140px; top: 1844px;"></heart><heart style="left: 1642px; top: 1733px;"></heart><heart style="left: 1426px; top: 94px;"></heart><heart style="left: 542px; top: 504px;"></heart><heart style="left: 837px; top: 1145px;"></heart><heart style="left: 35px; top: 847px;"></heart><heart style="left: 398px; top: 821px;"></heart><heart style="left: 434px; top: 1417px;"></heart><heart style="left: 34px; top: 229px;"></heart><heart style="left: 1582px; top: 131px;"></heart><heart style="left: 1244px; top: 850px;"></heart><heart style="left: 1452px; top: 1643px;"></heart><heart style="left: 185px; top: 300px;"></heart><heart style="left: 37px; top: 419px;"></heart><heart style="left: 1360px; top: 807px;"></heart><heart style="left: 186px; top: 220px;"></heart><heart style="left: 1565px; top: 1766px;"></heart><heart style="left: 982px; top: 1494px;"></heart><heart style="left: 1855px; top: 1698px;"></heart><heart style="left: 1123px; top: 82px;"></heart><heart style="left: 628px; top: 1037px;"></heart><heart style="left: 653px; top: 1542px;"></heart><heart style="left: 666px; top: 1807px;"></heart><heart style="left: 1144px; top: 420px;"></heart><heart style="left: 164px; top: 1147px;"></heart><heart style="left: 143px; top: 1213px;"></heart><heart style="left: 727px; top: 1252px;"></heart><heart style="left: 1488px; top: 8px;"></heart><heart style="left: 884px; top: 1145px;"></heart><heart style="left: 1203px; top: 1755px;"></heart><heart style="left: 1230px; top: 814px;"></heart><heart style="left: 1623px; top: 570px;"></heart><heart style="left: 207px; top: 827px;"></heart><heart style="left: 1530px; top: 1575px;"></heart><heart style="left: 102px; top: 1075px;"></heart><heart style="left: 525px; top: 1502px;"></heart><heart style="left: 1494px; top: 861px;"></heart><heart style="left: 389px; top: 964px;"></heart><heart style="left: 945px; top: 125px;"></heart><heart style="left: 245px; top: 1108px;"></heart><heart style="left: 1674px; top: 917px;"></heart><heart style="left: 1175px; top: 628px;"></heart><heart style="left: 553px; top: 1119px;"></heart><heart style="left: 1509px; top: 1096px;"></heart><heart style="left: 1548px; top: 1840px;"></heart><heart style="left: 1200px; top: 1560px;"></heart><heart style="left: 739px; top: 543px;"></heart><heart style="left: 1353px; top: 1230px;"></heart><heart style="left: 557px; top: 1819px;"></heart><heart style="left: 16px; top: 584px;"></heart><heart style="left: 1867px; top: 181px;"></heart><heart style="left: 388px; top: 707px;"></heart><heart style="left: 557px; top: 93px;"></heart><heart style="left: 652px; top: 504px;"></heart><heart style="left: 484px; top: 64px;"></heart><heart style="left: 1602px; top: 1365px;"></heart><heart style="left: 289px; top: 1568px;"></heart><heart style="left: 1292px; top: 1384px;"></heart><heart style="left: 821px; top: 458px;"></heart><heart style="left: 557px; top: 791px;"></heart><heart style="left: 89px; top: 1382px;"></heart><heart style="left: 470px; top: 3px;"></heart><heart style="left: 922px; top: 327px;"></heart><heart style="left: 744px; top: 1221px;"></heart><heart style="left: 1706px; top: 1500px;"></heart><heart style="left: 248px; top: 157px;"></heart><heart style="left: 212px; top: 682px;"></heart><heart style="left: 1778px; top: 1183px;"></heart><heart style="left: 1449px; top: 974px;"></heart><heart style="left: 1252px; top: 1574px;"></heart><heart style="left: 18px; top: 1280px;"></heart><heart style="left: 1048px; top: 913px;"></heart><heart style="left: 1355px; top: 1245px;"></heart><heart style="left: 1861px; top: 1284px;"></heart><heart style="left: 1002px; top: 824px;"></heart><heart style="left: 1297px; top: 663px;"></heart><heart style="left: 1279px; top: 1291px;"></heart><heart style="left: 1291px; top: 549px;"></heart><heart style="left: 1356px; top: 688px;"></heart><heart style="left: 757px; top: 1801px;"></heart><heart style="left: 896px; top: 1070px;"></heart><heart style="left: 103px; top: 1042px;"></heart><heart style="left: 138px; top: 47px;"></heart><heart style="left: 1199px; top: 1050px;"></heart><heart style="left: 1398px; top: 1641px;"></heart><heart style="left: 327px; top: 1482px;"></heart><heart style="left: 1739px; top: 1015px;"></heart><heart style="left: 1420px; top: 9px;"></heart><heart style="left: 981px; top: 1373px;"></heart><heart style="left: 1894px; top: 569px;"></heart><heart style="left: 540px; top: 608px;"></heart><heart style="left: 716px; top: 1749px;"></heart><heart style="left: 33px; top: 555px;"></heart><heart style="left: 591px; top: 50px;"></heart><heart style="left: 173px; top: 1094px;"></heart><heart style="left: 1836px; top: 1790px;"></heart><heart style="left: 690px; top: 205px;"></heart><heart style="left: 1134px; top: 886px;"></heart><heart style="left: 622px; top: 638px;"></heart><heart style="left: 1078px; top: 1816px;"></heart><heart style="left: 557px; top: 941px;"></heart><heart style="left: 1255px; top: 282px;"></heart><heart style="left: 946px; top: 266px;"></heart><heart style="left: 1465px; top: 1698px;"></heart><heart style="left: 1079px; top: 1852px;"></heart><heart style="left: 1496px; top: 1489px;"></heart><heart style="left: 320px; top: 1372px;"></heart><heart style="left: 873px; top: 1327px;"></heart><heart style="left: 1862px; top: 1309px;"></heart><heart style="left: 180px; top: 684px;"></heart><heart style="left: 923px; top: 1685px;"></heart><heart style="left: 143px; top: 104px;"></heart><heart style="left: 765px; top: 72px;"></heart><heart style="left: 426px; top: 593px;"></heart><heart style="left: 984px; top: 661px;"></heart><heart style="left: 1044px; top: 483px;"></heart><heart style="left: 62px; top: 1267px;"></heart><heart style="left: 974px; top: 1339px;"></heart><heart style="left: 350px; top: 1159px;"></heart><heart style="left: 1611px; top: 1315px;"></heart><heart style="left: 1219px; top: 1732px;"></heart><heart style="left: 1539px; top: 1028px;"></heart><heart style="left: 1024px; top: 30px;"></heart><heart style="left: 547px; top: 1087px;"></heart><heart style="left: 1209px; top: 922px;"></heart><heart style="left: 847px; top: 1598px;"></heart><heart style="left: 780px; top: 619px;"></heart><heart style="left: 539px; top: 872px;"></heart><heart style="left: 440px; top: 1611px;"></heart><heart style="left: 566px; top: 1149px;"></heart><heart style="left: 898px; top: 61px;"></heart><heart style="left: 496px; top: 1526px;"></heart><heart style="left: 1280px; top: 1630px;"></heart><heart style="left: 1904px; top: 567px;"></heart><heart style="left: 1753px; top: 1504px;"></heart><heart style="left: 1177px; top: 1269px;"></heart><heart style="left: 167px; top: 584px;"></heart><heart style="left: 1141px; top: 1624px;"></heart><heart style="left: 877px; top: 475px;"></heart><heart style="left: 228px; top: 752px;"></heart><heart style="left: 1558px; top: 67px;"></heart><heart style="left: 1072px; top: 686px;"></heart><heart style="left: 547px; top: 1013px;"></heart><heart style="left: 1620px; top: 1637px;"></heart><heart style="left: 509px; top: 507px;"></heart><heart style="left: 386px; top: 921px;"></heart><heart style="left: 619px; top: 73px;"></heart><heart style="left: 218px; top: 1325px;"></heart><heart style="left: 1482px; top: 1663px;"></heart><heart style="left: 514px; top: 506px;"></heart><heart style="left: 1699px; top: 566px;"></heart><heart style="left: 1505px; top: 1581px;"></heart><heart style="left: 571px; top: 1153px;"></heart><heart style="left: 992px; top: 917px;"></heart><heart style="left: 457px; top: 1230px;"></heart><heart style="left: 1900px; top: 1175px;"></heart><heart style="left: 1380px; top: 1134px;"></heart><heart style="left: 276px; top: 120px;"></heart><heart style="left: 498px; top: 933px;"></heart><heart style="left: 405px; top: 130px;"></heart><heart style="left: 881px; top: 777px;"></heart><heart style="left: 253px; top: 1172px;"></heart><heart style="left: 334px; top: 6px;"></heart><heart style="left: 334px; top: 629px;"></heart><heart style="left: 1458px; top: 1276px;"></heart><heart style="left: 259px; top: 1551px;"></heart><heart style="left: 1764px; top: 709px;"></heart><heart style="left: 1239px; top: 1391px;"></heart><heart style="left: 1493px; top: 1559px;"></heart><heart style="left: 1826px; top: 396px;"></heart><heart style="left: 769px; top: 1098px;"></heart><heart style="left: 843px; top: 334px;"></heart><heart style="left: 1137px; top: 1760px;"></heart><heart style="left: 823px; top: 483px;"></heart><heart style="left: 1421px; top: 1662px;"></heart><heart style="left: 304px; top: 1845px;"></heart><heart style="left: 463px; top: 1271px;"></heart><heart style="left: 1460px; top: 384px;"></heart><heart style="left: 73px; top: 665px;"></heart><heart style="left: 71px; top: 123px;"></heart><heart style="left: 360px; top: 1601px;"></heart><heart style="left: 168px; top: 32px;"></heart><heart style="left: 471px; top: 1163px;"></heart><heart style="left: 1362px; top: 1727px;"></heart><heart style="left: 276px; top: 1499px;"></heart><heart style="left: 387px; top: 1420px;"></heart><heart style="left: 456px; top: 757px;"></heart><heart style="left: 721px; top: 1632px;"></heart><heart style="left: 337px; top: 549px;"></heart><heart style="left: 1388px; top: 668px;"></heart><heart style="left: 1371px; top: 660px;"></heart><heart style="left: 871px; top: 1315px;"></heart><heart style="left: 152px; top: 623px;"></heart><heart style="left: 77px; top: 1242px;"></heart><heart style="left: 1237px; top: 616px;"></heart><heart style="left: 684px; top: 108px;"></heart><heart style="left: 1683px; top: 1477px;"></heart><heart style="left: 363px; top: 939px;"></heart><heart style="left: 1866px; top: 1271px;"></heart><heart style="left: 817px; top: 1730px;"></heart><heart style="left: 277px; top: 1034px;"></heart><heart style="left: 117px; top: 1534px;"></heart><heart style="left: 1548px; top: 1509px;"></heart><heart style="left: 1347px; top: 1608px;"></heart><heart style="left: 650px; top: 1745px;"></heart><heart style="left: 735px; top: 1172px;"></heart><heart style="left: 279px; top: 886px;"></heart><heart style="left: 907px; top: 483px;"></heart><heart style="left: 1341px; top: 226px;"></heart><heart style="left: 1613px; top: 1315px;"></heart><heart style="left: 930px; top: 1262px;"></heart><heart style="left: 950px; top: 1364px;"></heart><heart style="left: 265px; top: 434px;"></heart><heart style="left: 448px; top: 712px;"></heart><heart style="left: 319px; top: 1564px;"></heart><heart style="left: 1074px; top: 1546px;"></heart><heart style="left: 311px; top: 1572px;"></heart><heart style="left: 258px; top: 1776px;"></heart><heart style="left: 721px; top: 1176px;"></heart><heart style="left: 1887px; top: 1736px;"></heart><heart style="left: 1460px; top: 992px;"></heart><heart style="left: 172px; top: 218px;"></heart><heart style="left: 1430px; top: 1866px;"></heart><heart style="left: 1265px; top: 251px;"></heart><heart style="left: 1520px; top: 173px;"></heart><heart style="left: 435px; top: 1647px;"></heart><heart style="left: 632px; top: 734px;"></heart><heart style="left: 139px; top: 28px;"></heart><heart style="left: 180px; top: 1355px;"></heart><heart style="left: 1239px; top: 175px;"></heart><heart style="left: 1386px; top: 390px;"></heart><heart style="left: 832px; top: 520px;"></heart><heart style="left: 1154px; top: 1181px;"></heart><heart style="left: 197px; top: 560px;"></heart><heart style="left: 799px; top: 952px;"></heart><heart style="left: 189px; top: 1390px;"></heart><heart style="left: 1677px; top: 877px;"></heart><heart style="left: 401px; top: 1254px;"></heart><heart style="left: 1718px; top: 885px;"></heart><heart style="left: 28px; top: 332px;"></heart><heart style="left: 386px; top: 519px;"></heart><heart style="left: 1362px; top: 305px;"></heart><heart style="left: 1189px; top: 619px;"></heart><heart style="left: 1876px; top: 970px;"></heart><heart style="left: 232px; top: 1275px;"></heart><heart style="left: 1535px; top: 475px;"></heart><heart style="left: 1567px; top: 1192px;"></heart><heart style="left: 863px; top: 1263px;"></heart><heart style="left: 1293px; top: 848px;"></heart><heart style="left: 1563px; top: 1237px;"></heart><heart style="left: 667px; top: 1410px;"></heart><heart style="left: 947px; top: 635px;"></heart><heart style="left: 1381px; top: 1210px;"></heart><heart style="left: 228px; top: 103px;"></heart><heart style="left: 782px; top: 1595px;"></heart><heart style="left: 254px; top: 1530px;"></heart><heart style="left: 1641px; top: 328px;"></heart><heart style="left: 954px; top: 1055px;"></heart><heart style="left: 306px; top: 563px;"></heart><heart style="left: 743px; top: 1773px;"></heart><heart style="left: 1420px; top: 323px;"></heart><heart style="left: 1894px; top: 802px;"></heart><heart style="left: 496px; top: 1022px;"></heart><heart style="left: 1808px; top: 622px;"></heart><heart style="left: 1802px; top: 1294px;"></heart><heart style="left: 1133px; top: 1382px;"></heart><heart style="left: 628px; top: 847px;"></heart><heart style="left: 1015px; top: 822px;"></heart><heart style="left: 517px; top: 1036px;"></heart><heart style="left: 418px; top: 545px;"></heart><heart style="left: 322px; top: 12px;"></heart><heart style="left: 69px; top: 1285px;"></heart><heart style="left: 137px; top: 336px;"></heart><heart style="left: 833px; top: 425px;"></heart><heart style="left: 461px; top: 32px;"></heart><heart style="left: 1596px; top: 994px;"></heart><heart style="left: 151px; top: 1733px;"></heart><heart style="left: 1232px; top: 806px;"></heart><heart style="left: 772px; top: 175px;"></heart><heart style="left: 501px; top: 731px;"></heart><heart style="left: 1033px; top: 1659px;"></heart><heart style="left: 871px; top: 1068px;"></heart><heart style="left: 1230px; top: 424px;"></heart><heart style="left: 1854px; top: 708px;"></heart><heart style="left: 340px; top: 70px;"></heart><heart style="left: 1718px; top: 979px;"></heart><heart style="left: 1120px; top: 860px;"></heart><heart style="left: 586px; top: 1088px;"></heart><heart style="left: 1084px; top: 1630px;"></heart><heart style="left: 1305px; top: 1801px;"></heart><heart style="left: 1176px; top: 390px;"></heart><heart style="left: 128px; top: 25px;"></heart><heart style="left: 1180px; top: 1114px;"></heart><heart style="left: 693px; top: 752px;"></heart><heart style="left: 845px; top: 1328px;"></heart><heart style="left: 898px; top: 329px;"></heart><heart style="left: 743px; top: 316px;"></heart><heart style="left: 1115px; top: 1496px;"></heart><heart style="left: 24px; top: 964px;"></heart><heart style="left: 1549px; top: 1803px;"></heart><heart style="left: 1027px; top: 498px;"></heart><heart style="left: 528px; top: 1564px;"></heart><heart style="left: 816px; top: 879px;"></heart><heart style="left: 1169px; top: 1456px;"></heart><heart style="left: 1503px; top: 1225px;"></heart><heart style="left: 1026px; top: 483px;"></heart><heart style="left: 1426px; top: 518px;"></heart><heart style="left: 566px; top: 1524px;"></heart><heart style="left: 329px; top: 1539px;"></heart><heart style="left: 1562px; top: 1801px;"></heart><heart style="left: 1650px; top: 760px;"></heart><heart style="left: 278px; top: 866px;"></heart><heart style="left: 616px; top: 604px;"></heart><heart style="left: 1288px; top: 827px;"></heart><heart style="left: 1546px; top: 1820px;"></heart><heart style="left: 1381px; top: 917px;"></heart><heart style="left: 886px; top: 1510px;"></heart><heart style="left: 265px; top: 1869px;"></heart><heart style="left: 542px; top: 324px;"></heart><heart style="left: 1118px; top: 394px;"></heart><heart style="left: 864px; top: 20px;"></heart><heart style="left: 1457px; top: 1854px;"></heart><heart style="left: 153px; top: 1125px;"></heart><heart style="left: 947px; top: 103px;"></heart><heart style="left: 80px; top: 1795px;"></heart><heart style="left: 185px; top: 923px;"></heart><heart style="left: 39px; top: 999px;"></heart><heart style="left: 387px; top: 894px;"></heart><heart style="left: 1059px; top: 200px;"></heart><heart style="left: 1912px; top: 1703px;"></heart><heart style="left: 1907px; top: 1555px;"></heart><heart style="left: 769px; top: 1697px;"></heart><heart style="left: 1048px; top: 1768px;"></heart><heart style="left: 347px; top: 973px;"></heart><heart style="left: 1741px; top: 1557px;"></heart><heart style="left: 1511px; top: 879px;"></heart><heart style="left: 497px; top: 842px;"></heart></div>
+  <script type="text/javascript">
+    //获取父容器
+    var mainObj = document.getElementById('main')
+    //获取浏览器的高度
+    var innerWidth = document.body.clientWidth
+    var innerHeight = document.body.clientHeight
+    
+    //计数器
+    var number = 0
+    
+    /**
+     * 位置随机生成
+     */
+    var interval = setInterval(function() {
+        var heart = document.createElement('heart')
+        heart.style.left = Math.floor(Math.random() * innerWidth) + 'px'
+        heart.style.top = Math.floor(Math.random() * innerHeight) + 'px'
+        mainObj.appendChild(heart)
+        number++
+        //数量达到520时结束
+        if (number >= 520) {
+            clearInterval(interval)
+        }
+    }, 50)
+  </script>
+
+  <script>
+
+
+    (function () {
+      const _face = new THREE.Triangle();
+
+      const _color = new THREE.Vector3();
+
+      class MeshSurfaceSampler {
+
+        constructor(mesh) {
+
+          let geometry = mesh.geometry;
+
+          if (!geometry.isBufferGeometry || geometry.attributes.position.itemSize !== 3) {
+
+            throw new Error('THREE.MeshSurfaceSampler: Requires BufferGeometry triangle mesh.');
+
+          }
+
+          if (geometry.index) {
+
+            console.warn('THREE.MeshSurfaceSampler: Converting geometry to non-indexed BufferGeometry.');
+            geometry = geometry.toNonIndexed();
+
+          }
+
+          this.geometry = geometry;
+          this.randomFunction = Math.random;
+          this.positionAttribute = this.geometry.getAttribute('position');
+          this.colorAttribute = this.geometry.getAttribute('color');
+          this.weightAttribute = null;
+          this.distribution = null;
+
+        }
+
+        setWeightAttribute(name) {
+
+          this.weightAttribute = name ? this.geometry.getAttribute(name) : null;
+          return this;
+
+        }
+
+        build() {
+
+          const positionAttribute = this.positionAttribute;
+          const weightAttribute = this.weightAttribute;
+          const faceWeights = new Float32Array(positionAttribute.count / 3); // Accumulate weights for each mesh face.
+
+          for (let i = 0; i < positionAttribute.count; i += 3) {
+
+            let faceWeight = 1;
+
+            if (weightAttribute) {
+
+              faceWeight = weightAttribute.getX(i) + weightAttribute.getX(i + 1) + weightAttribute.getX(i + 2);
+
+            }
+
+            _face.a.fromBufferAttribute(positionAttribute, i);
+
+            _face.b.fromBufferAttribute(positionAttribute, i + 1);
+
+            _face.c.fromBufferAttribute(positionAttribute, i + 2);
+
+            faceWeight *= _face.getArea();
+            faceWeights[i / 3] = faceWeight;
+
+          } // Store cumulative total face weights in an array, where weight index
+          // corresponds to face index.
+
+
+          this.distribution = new Float32Array(positionAttribute.count / 3);
+          let cumulativeTotal = 0;
+
+          for (let i = 0; i < faceWeights.length; i++) {
+
+            cumulativeTotal += faceWeights[i];
+            this.distribution[i] = cumulativeTotal;
+
+          }
+
+          return this;
+
+        }
+
+        setRandomGenerator(randomFunction) {
+
+          this.randomFunction = randomFunction;
+          return this;
+
+        }
+
+        sample(targetPosition, targetNormal, targetColor) {
+
+          const cumulativeTotal = this.distribution[this.distribution.length - 1];
+          const faceIndex = this.binarySearch(this.randomFunction() * cumulativeTotal);
+          return this.sampleFace(faceIndex, targetPosition, targetNormal, targetColor);
+
+        }
+
+        binarySearch(x) {
+
+          const dist = this.distribution;
+          let start = 0;
+          let end = dist.length - 1;
+          let index = - 1;
+
+          while (start <= end) {
+
+            const mid = Math.ceil((start + end) / 2);
+
+            if (mid === 0 || dist[mid - 1] <= x && dist[mid] > x) {
+
+              index = mid;
+              break;
+
+            } else if (x < dist[mid]) {
+
+              end = mid - 1;
+
+            } else {
+
+              start = mid + 1;
+
+            }
+
+          }
+
+          return index;
+
+        }
+
+        sampleFace(faceIndex, targetPosition, targetNormal, targetColor) {
+
+          let u = this.randomFunction();
+          let v = this.randomFunction();
+
+          if (u + v > 1) {
+
+            u = 1 - u;
+            v = 1 - v;
+
+          }
+
+          _face.a.fromBufferAttribute(this.positionAttribute, faceIndex * 3);
+
+          _face.b.fromBufferAttribute(this.positionAttribute, faceIndex * 3 + 1);
+
+          _face.c.fromBufferAttribute(this.positionAttribute, faceIndex * 3 + 2);
+
+          targetPosition.set(0, 0, 0).addScaledVector(_face.a, u).addScaledVector(_face.b, v).addScaledVector(_face.c, 1 - (u + v));
+
+          if (targetNormal !== undefined) {
+
+            _face.getNormal(targetNormal);
+
+          }
+
+          if (targetColor !== undefined && this.colorAttribute !== undefined) {
+
+            _face.a.fromBufferAttribute(this.colorAttribute, faceIndex * 3);
+
+            _face.b.fromBufferAttribute(this.colorAttribute, faceIndex * 3 + 1);
+
+            _face.c.fromBufferAttribute(this.colorAttribute, faceIndex * 3 + 2);
+
+            _color.set(0, 0, 0).addScaledVector(_face.a, u).addScaledVector(_face.b, v).addScaledVector(_face.c, 1 - (u + v));
+
+            targetColor.r = _color.x;
+            targetColor.g = _color.y;
+            targetColor.b = _color.z;
+          }
+          return this;
+
+        }
+
+      }
+
+      THREE.MeshSurfaceSampler = MeshSurfaceSampler;
+
+    })();
+
+  </script>
+  <script>
+    (function () {
+
+      const _object_pattern = /^[og]\s*(.+)?/; // mtllib file_reference
+
+      const _material_library_pattern = /^mtllib /; // usemtl material_name
+
+      const _material_use_pattern = /^usemtl /; // usemap map_name
+
+      const _map_use_pattern = /^usemap /;
+
+      const _vA = new THREE.Vector3();
+
+      const _vB = new THREE.Vector3();
+
+      const _vC = new THREE.Vector3();
+
+      const _ab = new THREE.Vector3();
+
+      const _cb = new THREE.Vector3();
+
+      function ParserState() {
+
+        const state = {
+          objects: [],
+          object: {},
+          vertices: [],
+          normals: [],
+          colors: [],
+          uvs: [],
+          materials: {},
+          materialLibraries: [],
+          startObject: function (name, fromDeclaration) {
+
+            // If the current object (initial from reset) is not from a g/o declaration in the parsed
+            // file. We need to use it for the first parsed g/o to keep things in sync.
+            if (this.object && this.object.fromDeclaration === false) {
+
+              this.object.name = name;
+              this.object.fromDeclaration = fromDeclaration !== false;
+              return;
+
+            }
+
+            const previousMaterial = this.object && typeof this.object.currentMaterial === 'function' ? this.object.currentMaterial() : undefined;
+
+            if (this.object && typeof this.object._finalize === 'function') {
+
+              this.object._finalize(true);
+
+            }
+
+            this.object = {
+              name: name || '',
+              fromDeclaration: fromDeclaration !== false,
+              geometry: {
+                vertices: [],
+                normals: [],
+                colors: [],
+                uvs: [],
+                hasUVIndices: false
+              },
+              materials: [],
+              smooth: true,
+              startMaterial: function (name, libraries) {
+
+                const previous = this._finalize(false); // New usemtl declaration overwrites an inherited material, except if faces were declared
+                // after the material, then it must be preserved for proper MultiMaterial continuation.
+
+
+                if (previous && (previous.inherited || previous.groupCount <= 0)) {
+
+                  this.materials.splice(previous.index, 1);
+
+                }
+
+                const material = {
+                  index: this.materials.length,
+                  name: name || '',
+                  mtllib: Array.isArray(libraries) && libraries.length > 0 ? libraries[libraries.length - 1] : '',
+                  smooth: previous !== undefined ? previous.smooth : this.smooth,
+                  groupStart: previous !== undefined ? previous.groupEnd : 0,
+                  groupEnd: - 1,
+                  groupCount: - 1,
+                  inherited: false,
+                  clone: function (index) {
+
+                    const cloned = {
+                      index: typeof index === 'number' ? index : this.index,
+                      name: this.name,
+                      mtllib: this.mtllib,
+                      smooth: this.smooth,
+                      groupStart: 0,
+                      groupEnd: - 1,
+                      groupCount: - 1,
+                      inherited: false
+                    };
+                    cloned.clone = this.clone.bind(cloned);
+                    return cloned;
+
+                  }
+                };
+                this.materials.push(material);
+                return material;
+
+              },
+              currentMaterial: function () {
+
+                if (this.materials.length > 0) {
+
+                  return this.materials[this.materials.length - 1];
+
+                }
+
+                return undefined;
+
+              },
+              _finalize: function (end) {
+
+                const lastMultiMaterial = this.currentMaterial();
+
+                if (lastMultiMaterial && lastMultiMaterial.groupEnd === - 1) {
+
+                  lastMultiMaterial.groupEnd = this.geometry.vertices.length / 3;
+                  lastMultiMaterial.groupCount = lastMultiMaterial.groupEnd - lastMultiMaterial.groupStart;
+                  lastMultiMaterial.inherited = false;
+
+                } // Ignore objects tail materials if no face declarations followed them before a new o/g started.
+
+
+                if (end && this.materials.length > 1) {
+
+                  for (let mi = this.materials.length - 1; mi >= 0; mi--) {
+
+                    if (this.materials[mi].groupCount <= 0) {
+
+                      this.materials.splice(mi, 1);
+
+                    }
+
+                  }
+
+                } // Guarantee at least one empty material, this makes the creation later more straight forward.
+
+
+                if (end && this.materials.length === 0) {
+
+                  this.materials.push({
+                    name: '',
+                    smooth: this.smooth
+                  });
+
+                }
+
+                return lastMultiMaterial;
+
+              }
+            }; // Inherit previous objects material.
+            // Spec tells us that a declared material must be set to all objects until a new material is declared.
+            // If a usemtl declaration is encountered while this new object is being parsed, it will
+            // overwrite the inherited material. Exception being that there was already face declarations
+            // to the inherited material, then it will be preserved for proper MultiMaterial continuation.
+
+            if (previousMaterial && previousMaterial.name && typeof previousMaterial.clone === 'function') {
+
+              const declared = previousMaterial.clone(0);
+              declared.inherited = true;
+              this.object.materials.push(declared);
+
+            }
+
+            this.objects.push(this.object);
+
+          },
+          finalize: function () {
+
+            if (this.object && typeof this.object._finalize === 'function') {
+
+              this.object._finalize(true);
+
+            }
+
+          },
+          parseVertexIndex: function (value, len) {
+
+            const index = parseInt(value, 10);
+            return (index >= 0 ? index - 1 : index + len / 3) * 3;
+
+          },
+          parseNormalIndex: function (value, len) {
+
+            const index = parseInt(value, 10);
+            return (index >= 0 ? index - 1 : index + len / 3) * 3;
+
+          },
+          parseUVIndex: function (value, len) {
+
+            const index = parseInt(value, 10);
+            return (index >= 0 ? index - 1 : index + len / 2) * 2;
+
+          },
+          addVertex: function (a, b, c) {
+
+            const src = this.vertices;
+            const dst = this.object.geometry.vertices;
+            dst.push(src[a + 0], src[a + 1], src[a + 2]);
+            dst.push(src[b + 0], src[b + 1], src[b + 2]);
+            dst.push(src[c + 0], src[c + 1], src[c + 2]);
+
+          },
+          addVertexPoint: function (a) {
+
+            const src = this.vertices;
+            const dst = this.object.geometry.vertices;
+            dst.push(src[a + 0], src[a + 1], src[a + 2]);
+
+          },
+          addVertexLine: function (a) {
+
+            const src = this.vertices;
+            const dst = this.object.geometry.vertices;
+            dst.push(src[a + 0], src[a + 1], src[a + 2]);
+
+          },
+          addNormal: function (a, b, c) {
+
+            const src = this.normals;
+            const dst = this.object.geometry.normals;
+            dst.push(src[a + 0], src[a + 1], src[a + 2]);
+            dst.push(src[b + 0], src[b + 1], src[b + 2]);
+            dst.push(src[c + 0], src[c + 1], src[c + 2]);
+
+          },
+          addFaceNormal: function (a, b, c) {
+
+            const src = this.vertices;
+            const dst = this.object.geometry.normals;
+
+            _vA.fromArray(src, a);
+
+            _vB.fromArray(src, b);
+
+            _vC.fromArray(src, c);
+
+            _cb.subVectors(_vC, _vB);
+
+            _ab.subVectors(_vA, _vB);
+
+            _cb.cross(_ab);
+
+            _cb.normalize();
+
+            dst.push(_cb.x, _cb.y, _cb.z);
+            dst.push(_cb.x, _cb.y, _cb.z);
+            dst.push(_cb.x, _cb.y, _cb.z);
+
+          },
+          addColor: function (a, b, c) {
+
+            const src = this.colors;
+            const dst = this.object.geometry.colors;
+            if (src[a] !== undefined) dst.push(src[a + 0], src[a + 1], src[a + 2]);
+            if (src[b] !== undefined) dst.push(src[b + 0], src[b + 1], src[b + 2]);
+            if (src[c] !== undefined) dst.push(src[c + 0], src[c + 1], src[c + 2]);
+
+          },
+          addUV: function (a, b, c) {
+
+            const src = this.uvs;
+            const dst = this.object.geometry.uvs;
+            dst.push(src[a + 0], src[a + 1]);
+            dst.push(src[b + 0], src[b + 1]);
+            dst.push(src[c + 0], src[c + 1]);
+
+          },
+          addDefaultUV: function () {
+
+            const dst = this.object.geometry.uvs;
+            dst.push(0, 0);
+            dst.push(0, 0);
+            dst.push(0, 0);
+
+          },
+          addUVLine: function (a) {
+
+            const src = this.uvs;
+            const dst = this.object.geometry.uvs;
+            dst.push(src[a + 0], src[a + 1]);
+
+          },
+          addFace: function (a, b, c, ua, ub, uc, na, nb, nc) {
+
+            const vLen = this.vertices.length;
+            let ia = this.parseVertexIndex(a, vLen);
+            let ib = this.parseVertexIndex(b, vLen);
+            let ic = this.parseVertexIndex(c, vLen);
+            this.addVertex(ia, ib, ic);
+            this.addColor(ia, ib, ic); // normals
+
+            if (na !== undefined && na !== '') {
+
+              const nLen = this.normals.length;
+              ia = this.parseNormalIndex(na, nLen);
+              ib = this.parseNormalIndex(nb, nLen);
+              ic = this.parseNormalIndex(nc, nLen);
+              this.addNormal(ia, ib, ic);
+
+            } else {
+
+              this.addFaceNormal(ia, ib, ic);
+
+            } // uvs
+
+
+            if (ua !== undefined && ua !== '') {
+
+              const uvLen = this.uvs.length;
+              ia = this.parseUVIndex(ua, uvLen);
+              ib = this.parseUVIndex(ub, uvLen);
+              ic = this.parseUVIndex(uc, uvLen);
+              this.addUV(ia, ib, ic);
+              this.object.geometry.hasUVIndices = true;
+
+            } else {
+
+              // add placeholder values (for inconsistent face definitions)
+              this.addDefaultUV();
+
+            }
+
+          },
+          addPointGeometry: function (vertices) {
+
+            this.object.geometry.type = 'Points';
+            const vLen = this.vertices.length;
+
+            for (let vi = 0, l = vertices.length; vi < l; vi++) {
+
+              const index = this.parseVertexIndex(vertices[vi], vLen);
+              this.addVertexPoint(index);
+              this.addColor(index);
+
+            }
+
+          },
+          addLineGeometry: function (vertices, uvs) {
+
+            this.object.geometry.type = 'Line';
+            const vLen = this.vertices.length;
+            const uvLen = this.uvs.length;
+
+            for (let vi = 0, l = vertices.length; vi < l; vi++) {
+
+              this.addVertexLine(this.parseVertexIndex(vertices[vi], vLen));
+
+            }
+
+            for (let uvi = 0, l = uvs.length; uvi < l; uvi++) {
+
+              this.addUVLine(this.parseUVIndex(uvs[uvi], uvLen));
+
+            }
+
+          }
+        };
+        state.startObject('', false);
+        return state;
+
+      } //
+
+
+      class OBJLoader extends THREE.Loader {
+
+        constructor(manager) {
+
+          super(manager);
+          this.materials = null;
+
+        }
+
+        load(url, onLoad, onProgress, onError) {
+
+          const scope = this;
+          const loader = new THREE.FileLoader(this.manager);
+          loader.setPath(this.path);
+          loader.setRequestHeader(this.requestHeader);
+          loader.setWithCredentials(this.withCredentials);
+          loader.load(url, function (text) {
+
+            try {
+
+              onLoad(scope.parse(text));
+
+            } catch (e) {
+
+              if (onError) {
+
+                onError(e);
+
+              } else {
+
+                console.error(e);
+
+              }
+
+              scope.manager.itemError(url);
+
+            }
+
+          }, onProgress, onError);
+
+        }
+
+        setMaterials(materials) {
+
+          this.materials = materials;
+          return this;
+
+        }
+
+        parse(text) {
+
+          const state = new ParserState();
+
+          if (text.indexOf('\r\n') !== - 1) {
+
+            // This is faster than String.split with regex that splits on both
+            text = text.replace(/\r\n/g, '\n');
+
+          }
+
+          if (text.indexOf('\\\n') !== - 1) {
+
+            // join lines separated by a line continuation character (\)
+            text = text.replace(/\\\n/g, '');
+
+          }
+
+          const lines = text.split('\n');
+          let line = '',
+            lineFirstChar = '';
+          let lineLength = 0;
+          let result = []; // Faster to just trim left side of the line. Use if available.
+
+          const trimLeft = typeof ''.trimLeft === 'function';
+
+          for (let i = 0, l = lines.length; i < l; i++) {
+
+            line = lines[i];
+            line = trimLeft ? line.trimLeft() : line.trim();
+            lineLength = line.length;
+            if (lineLength === 0) continue;
+            lineFirstChar = line.charAt(0); // @todo invoke passed in handler if any
+
+            if (lineFirstChar === '#') continue;
+
+            if (lineFirstChar === 'v') {
+
+              const data = line.split(/\s+/);
+
+              switch (data[0]) {
+
+                case 'v':
+                  state.vertices.push(parseFloat(data[1]), parseFloat(data[2]), parseFloat(data[3]));
+
+                  if (data.length >= 7) {
+
+                    state.colors.push(parseFloat(data[4]), parseFloat(data[5]), parseFloat(data[6]));
+
+                  } else {
+
+                    // if no colors are defined, add placeholders so color and vertex indices match
+                    state.colors.push(undefined, undefined, undefined);
+
+                  }
+
+                  break;
+
+                case 'vn':
+                  state.normals.push(parseFloat(data[1]), parseFloat(data[2]), parseFloat(data[3]));
+                  break;
+
+                case 'vt':
+                  state.uvs.push(parseFloat(data[1]), parseFloat(data[2]));
+                  break;
+
+              }
+
+            } else if (lineFirstChar === 'f') {
+
+              const lineData = line.substr(1).trim();
+              const vertexData = lineData.split(/\s+/);
+              const faceVertices = []; // Parse the face vertex data into an easy to work with format
+
+              for (let j = 0, jl = vertexData.length; j < jl; j++) {
+
+                const vertex = vertexData[j];
+
+                if (vertex.length > 0) {
+
+                  const vertexParts = vertex.split('/');
+                  faceVertices.push(vertexParts);
+
+                }
+
+              } // Draw an edge between the first vertex and all subsequent vertices to form an n-gon
+
+
+              const v1 = faceVertices[0];
+
+              for (let j = 1, jl = faceVertices.length - 1; j < jl; j++) {
+
+                const v2 = faceVertices[j];
+                const v3 = faceVertices[j + 1];
+                state.addFace(v1[0], v2[0], v3[0], v1[1], v2[1], v3[1], v1[2], v2[2], v3[2]);
+
+              }
+
+            } else if (lineFirstChar === 'l') {
+
+              const lineParts = line.substring(1).trim().split(' ');
+              let lineVertices = [];
+              const lineUVs = [];
+
+              if (line.indexOf('/') === - 1) {
+
+                lineVertices = lineParts;
+
+              } else {
+
+                for (let li = 0, llen = lineParts.length; li < llen; li++) {
+
+                  const parts = lineParts[li].split('/');
+                  if (parts[0] !== '') lineVertices.push(parts[0]);
+                  if (parts[1] !== '') lineUVs.push(parts[1]);
+
+                }
+
+              }
+
+              state.addLineGeometry(lineVertices, lineUVs);
+
+            } else if (lineFirstChar === 'p') {
+
+              const lineData = line.substr(1).trim();
+              const pointData = lineData.split(' ');
+              state.addPointGeometry(pointData);
+
+            } else if ((result = _object_pattern.exec(line)) !== null) {
+
+              // o object_name
+              // or
+              // g group_name
+              // WORKAROUND: https://bugs.chromium.org/p/v8/issues/detail?id=2869
+              // let name = result[ 0 ].substr( 1 ).trim();
+              const name = (' ' + result[0].substr(1).trim()).substr(1);
+              state.startObject(name);
+
+            } else if (_material_use_pattern.test(line)) {
+
+              // material
+              state.object.startMaterial(line.substring(7).trim(), state.materialLibraries);
+
+            } else if (_material_library_pattern.test(line)) {
+
+              // mtl file
+              state.materialLibraries.push(line.substring(7).trim());
+
+            } else if (_map_use_pattern.test(line)) {
+
+              // the line is parsed but ignored since the loader assumes textures are defined MTL files
+              // (according to https://www.okino.com/conv/imp_wave.htm, 'usemap' is the old-style Wavefront texture reference method)
+              console.warn('THREE.OBJLoader: Rendering identifier "usemap" not supported. Textures must be defined in MTL files.');
+
+            } else if (lineFirstChar === 's') {
+
+              result = line.split(' '); // smooth shading
+              // @todo Handle files that have varying smooth values for a set of faces inside one geometry,
+              // but does not define a usemtl for each face set.
+              // This should be detected and a dummy material created (later MultiMaterial and geometry groups).
+              // This requires some care to not create extra material on each smooth value for "normal" obj files.
+              // where explicit usemtl defines geometry groups.
+              // Example asset: examples/models/obj/cerberus/Cerberus.obj
+
+              /*
+               * http://paulbourke.net/dataformats/obj/
+               * or
+               * http://www.cs.utah.edu/~boulos/cs3505/obj_spec.pdf
+               *
+               * From chapter "Grouping" Syntax explanation "s group_number":
+               * "group_number is the smoothing group number. To turn off smoothing groups, use a value of 0 or off.
+               * Polygonal elements use group numbers to put elements in different smoothing groups. For free-form
+               * surfaces, smoothing groups are either turned on or off; there is no difference between values greater
+               * than 0."
+               */
+
+              if (result.length > 1) {
+
+                const value = result[1].trim().toLowerCase();
+                state.object.smooth = value !== '0' && value !== 'off';
+
+              } else {
+
+                // ZBrush can produce "s" lines #11707
+                state.object.smooth = true;
+
+              }
+
+              const material = state.object.currentMaterial();
+              if (material) material.smooth = state.object.smooth;
+
+            } else {
+
+              // Handle null terminated files without exception
+              if (line === '\0') continue;
+              console.warn('THREE.OBJLoader: Unexpected line: "' + line + '"');
+
+            }
+
+          }
+
+          state.finalize();
+          const container = new THREE.Group();
+          container.materialLibraries = [].concat(state.materialLibraries);
+          const hasPrimitives = !(state.objects.length === 1 && state.objects[0].geometry.vertices.length === 0);
+
+          if (hasPrimitives === true) {
+
+            for (let i = 0, l = state.objects.length; i < l; i++) {
+
+              const object = state.objects[i];
+              const geometry = object.geometry;
+              const materials = object.materials;
+              const isLine = geometry.type === 'Line';
+              const isPoints = geometry.type === 'Points';
+              let hasVertexColors = false; // Skip o/g line declarations that did not follow with any faces
+
+              if (geometry.vertices.length === 0) continue;
+              const buffergeometry = new THREE.BufferGeometry();
+              buffergeometry.setAttribute('position', new THREE.Float32BufferAttribute(geometry.vertices, 3));
+
+              if (geometry.normals.length > 0) {
+
+                buffergeometry.setAttribute('normal', new THREE.Float32BufferAttribute(geometry.normals, 3));
+
+              }
+
+              if (geometry.colors.length > 0) {
+
+                hasVertexColors = true;
+                buffergeometry.setAttribute('color', new THREE.Float32BufferAttribute(geometry.colors, 3));
+
+              }
+
+              if (geometry.hasUVIndices === true) {
+
+                buffergeometry.setAttribute('uv', new THREE.Float32BufferAttribute(geometry.uvs, 2));
+
+              } // Create materials
+
+
+              const createdMaterials = [];
+
+              for (let mi = 0, miLen = materials.length; mi < miLen; mi++) {
+
+                const sourceMaterial = materials[mi];
+                const materialHash = sourceMaterial.name + '_' + sourceMaterial.smooth + '_' + hasVertexColors;
+                let material = state.materials[materialHash];
+
+                if (this.materials !== null) {
+
+                  material = this.materials.create(sourceMaterial.name); // mtl etc. loaders probably can't create line materials correctly, copy properties to a line material.
+
+                  if (isLine && material && !(material instanceof THREE.LineBasicMaterial)) {
+
+                    const materialLine = new THREE.LineBasicMaterial();
+                    THREE.Material.prototype.copy.call(materialLine, material);
+                    materialLine.color.copy(material.color);
+                    material = materialLine;
+
+                  } else if (isPoints && material && !(material instanceof THREE.PointsMaterial)) {
+
+                    const materialPoints = new THREE.PointsMaterial({
+                      size: 10,
+                      sizeAttenuation: false
+                    });
+                    THREE.Material.prototype.copy.call(materialPoints, material);
+                    materialPoints.color.copy(material.color);
+                    materialPoints.map = material.map;
+                    material = materialPoints;
+
+                  }
+
+                }
+
+                if (material === undefined) {
+
+                  if (isLine) {
+
+                    material = new THREE.LineBasicMaterial();
+
+                  } else if (isPoints) {
+
+                    material = new THREE.PointsMaterial({
+                      size: 1,
+                      sizeAttenuation: false
+                    });
+
+                  } else {
+
+                    material = new THREE.MeshPhongMaterial();
+
+                  }
+
+                  material.name = sourceMaterial.name;
+                  material.flatShading = sourceMaterial.smooth ? false : true;
+                  material.vertexColors = hasVertexColors;
+                  state.materials[materialHash] = material;
+
+                }
+
+                createdMaterials.push(material);
+
+              } // Create mesh
+
+
+              let mesh;
+
+              if (createdMaterials.length > 1) {
+
+                for (let mi = 0, miLen = materials.length; mi < miLen; mi++) {
+
+                  const sourceMaterial = materials[mi];
+                  buffergeometry.addGroup(sourceMaterial.groupStart, sourceMaterial.groupCount, mi);
+
+                }
+
+                if (isLine) {
+
+                  mesh = new THREE.LineSegments(buffergeometry, createdMaterials);
+
+                } else if (isPoints) {
+
+                  mesh = new THREE.Points(buffergeometry, createdMaterials);
+
+                } else {
+
+                  mesh = new THREE.Mesh(buffergeometry, createdMaterials);
+
+                }
+
+              } else {
+
+                if (isLine) {
+
+                  mesh = new THREE.LineSegments(buffergeometry, createdMaterials[0]);
+
+                } else if (isPoints) {
+
+                  mesh = new THREE.Points(buffergeometry, createdMaterials[0]);
+
+                } else {
+
+                  mesh = new THREE.Mesh(buffergeometry, createdMaterials[0]);
+
+                }
+
+              }
+
+              mesh.name = object.name;
+              container.add(mesh);
+
+            }
+
+          } else {
+
+            // if there is only the default parser state object with no geometry data, interpret data as point cloud
+            if (state.vertices.length > 0) {
+
+              const material = new THREE.PointsMaterial({
+                size: 1,
+                sizeAttenuation: false
+              });
+              const buffergeometry = new THREE.BufferGeometry();
+              buffergeometry.setAttribute('position', new THREE.Float32BufferAttribute(state.vertices, 3));
+
+              if (state.colors.length > 0 && state.colors[0] !== undefined) {
+
+                buffergeometry.setAttribute('color', new THREE.Float32BufferAttribute(state.colors, 3));
+                material.vertexColors = true;
+
+              }
+
+              const points = new THREE.Points(buffergeometry, material);
+              container.add(points);
+
+            }
+
+          }
+
+          return container;
+
+        }
+
+      }
+
+      THREE.OBJLoader = OBJLoader;
+
+    })();
+
+  </script>
+
+  
+  
+
+
+
+</body></html>
+  <head>
+    <meta charset="utf-8" />
+    <title>💗</title>
+ 
+    <style>
+      html,
+      body {
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        background: #000;
+      }
+      canvas {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        animation: anim 1.5s ease-in-out infinite;
+        -webkit-animation: anim 1.5s ease-in-out infinite;
+        -o-animation: anim 1.5s ease-in-out infinite;
+        -moz-animation: anim 1.5s ease-in-out infinite;
+      }
+      #name {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin-top: -20px;
+        font-size: 46px;
+        color: #ea80b0;
+      }
+      @keyframes anim {
+        0% {
+          transform: scale(0.8);
+        }
+        25% {
+          transform: scale(0.7);
+        }
+        50% {
+          transform: scale(1);
+        }
+        75% {
+          transform: scale(0.7);
+        }
+        100% {
+          transform: scale(0.8);
+        }
+      }
+      @-webkit-keyframes anim {
+        0% {
+          -webkit-transform: scale(0.8);
+        }
+        25% {
+          -webkit-transform: scale(0.7);
+        }
+        50% {
+          -webkit-transform: scale(1);
+        }
+        75% {
+          -webkit-transform: scale(0.7);
+        }
+        100% {
+          -webkit-transform: scale(0.8);
+        }
+      }
+      @-o-keyframes anim {
+        0% {
+          -o-transform: scale(0.8);
+        }
+        25% {
+          -o-transform: scale(0.7);
+        }
+        50% {
+          -o-transform: scale(1);
+        }
+        75% {
+          -o-transform: scale(0.7);
+        }
+        100% {
+          -o-transform: scale(0.8);
+        }
+      }
+      @-moz-keyframes anim {
+        0% {
+          -moz-transform: scale(0.8);
+        }
+        25% {
+          -moz-transform: scale(0.7);
+        }
+        50% {
+          -moz-transform: scale(1);
+        }
+        75% {
+          -moz-transform: scale(0.7);
+        }
+        100% {
+          -moz-transform: scale(0.8);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="pinkboard"></canvas>
+    <!-- 在下面加名字 -->
+     <div id="name" style="color: blue;"> </div> 
+ 
+    <script>
+      var settings = {
+        particles: {
+          length: 500, 
+          duration: 2, 
+          velocity: 100, 
+          effect: -0.75,
+          size: 30, 
+        },
+      };
+      (function () {
+        var b = 0;
+        var c = ["ms", "moz", "webkit", "o"];
+        for (var a = 0; a < c.length && !window.requestAnimationFrame; ++a) {
+          window.requestAnimationFrame = window[c[a] + "RequestAnimationFrame"];
+          window.cancelAnimationFrame =
+            window[c[a] + "CancelAnimationFrame"] ||
+            window[c[a] + "CancelRequestAnimationFrame"];
+        }
+        if (!window.requestAnimationFrame) {
+          window.requestAnimationFrame = function (h, e) {
+            var d = new Date().getTime();
+            var f = Math.max(0, 16 - (d - b));
+            var g = window.setTimeout(function () {
+              h(d + f);
+            }, f);
+            b = d + f;
+            return g;
+          };
+        }
+        if (!window.cancelAnimationFrame) {
+          window.cancelAnimationFrame = function (d) {
+            clearTimeout(d);
+          };
+        }
+      })();
+      var Point = (function () {
+        function Point(x, y) {
+          this.x = typeof x !== "undefined" ? x : 0;
+          this.y = typeof y !== "undefined" ? y : 0;
+        }
+        Point.prototype.clone = function () {
+          return new Point(this.x, this.y);
+        };
+        Point.prototype.length = function (length) {
+          if (typeof length == "undefined")
+            return Math.sqrt(this.x * this.x + this.y * this.y);
+          this.normalize();
+          this.x *= length;
+          this.y *= length;
+          return this;
+        };
+        Point.prototype.normalize = function () {
+          var length = this.length();
+          this.x /= length;
+          this.y /= length;
+          return this;
+        };
+        return Point;
+      })();
+      var Particle = (function () {
+        function Particle() {
+          this.position = new Point();
+          this.velocity = new Point();
+          this.acceleration = new Point();
+          this.age = 0;
+        }
+        Particle.prototype.initialize = function (x, y, dx, dy) {
+          this.position.x = x;
+          this.position.y = y;
+          this.velocity.x = dx;
+          this.velocity.y = dy;
+          this.acceleration.x = dx * settings.particles.effect;
+          this.acceleration.y = dy * settings.particles.effect;
+          this.age = 0;
+        };
+        Particle.prototype.update = function (deltaTime) {
+          this.position.x += this.velocity.x * deltaTime;
+          this.position.y += this.velocity.y * deltaTime;
+          this.velocity.x += this.acceleration.x * deltaTime;
+          this.velocity.y += this.acceleration.y * deltaTime;
+          this.age += deltaTime;
+        };
+        Particle.prototype.draw = function (context, image) {
+          function ease(t) {
+            return --t * t * t + 1;
+          }
+          var size = image.width * ease(this.age / settings.particles.duration);
+          context.globalAlpha = 1 - this.age / settings.particles.duration;
+          context.drawImage(
+            image,
+            this.position.x - size / 2,
+            this.position.y - size / 2,
+            size,
+            size
+          );
+        };
+        return Particle;
+      })();
+      var ParticlePool = (function () {
+        var particles,
+          firstActive = 0,
+          firstFree = 0,
+          duration = settings.particles.duration;
+ 
+        function ParticlePool(length) {
+          particles = new Array(length);
+          for (var i = 0; i < particles.length; i++)
+            particles[i] = new Particle();
+        }
+        ParticlePool.prototype.add = function (x, y, dx, dy) {
+          particles[firstFree].initialize(x, y, dx, dy);
+          firstFree++;
+          if (firstFree == particles.length) firstFree = 0;
+          if (firstActive == firstFree) firstActive++;
+          if (firstActive == particles.length) firstActive = 0;
+        };
+        ParticlePool.prototype.update = function (deltaTime) {
+          var i;
+          if (firstActive < firstFree) {
+            for (i = firstActive; i < firstFree; i++)
+              particles[i].update(deltaTime);
+          }
+          if (firstFree < firstActive) {
+            for (i = firstActive; i < particles.length; i++)
+              particles[i].update(deltaTime);
+            for (i = 0; i < firstFree; i++) particles[i].update(deltaTime);
+          }
+          while (
+            particles[firstActive].age >= duration &&
+            firstActive != firstFree
+          ) {
+            firstActive++;
+            if (firstActive == particles.length) firstActive = 0;
+          }
+        };
+        ParticlePool.prototype.draw = function (context, image) {
+          if (firstActive < firstFree) {
+            for (i = firstActive; i < firstFree; i++)
+              particles[i].draw(context, image);
+          }
+          if (firstFree < firstActive) {
+            for (i = firstActive; i < particles.length; i++)
+              particles[i].draw(context, image);
+            for (i = 0; i < firstFree; i++) particles[i].draw(context, image);
+          }
+        };
+        return ParticlePool;
+      })();
+      (function (canvas) {
+        var context = canvas.getContext("2d"),
+          particles = new ParticlePool(settings.particles.length),
+          particleRate =
+            settings.particles.length / settings.particles.duration, 
+          time;
+        function pointOnHeart(t) {
+          return new Point(
+            160 * Math.pow(Math.sin(t), 3),
+            130 * Math.cos(t) -
+              50 * Math.cos(2 * t) -
+              20 * Math.cos(3 * t) -
+              10 * Math.cos(4 * t) +
+              25
+          );
+        }
+        var image = (function () {
+          var canvas = document.createElement("canvas"),
+            context = canvas.getContext("2d");
+          canvas.width = settings.particles.size;
+          canvas.height = settings.particles.size;
+          function to(t) {
+            var point = pointOnHeart(t);
+            point.x =
+              settings.particles.size / 2 +
+              (point.x * settings.particles.size) / 350;
+            point.y =
+              settings.particles.size / 2 -
+              (point.y * settings.particles.size) / 350;
+            return point;
+          }
+          context.beginPath();
+          var t = -Math.PI;
+          var point = to(t);
+          context.moveTo(point.x, point.y);
+          while (t < Math.PI) {
+            t += 0.01;
+            point = to(t);
+            context.lineTo(point.x, point.y);
+          }
+          context.closePath();
+          context.fillStyle = "#ea80b0";
+          context.fill();
+          var image = new Image();
+          image.src = canvas.toDataURL();
+          return image;
+        })();
+        function render() {
+          requestAnimationFrame(render);
+          var newTime = new Date().getTime() / 1000,
+            deltaTime = newTime - (time || newTime);
+          time = newTime;
+          context.clearRect(0, 0, canvas.width, canvas.height);
+          var amount = particleRate * deltaTime;
+          for (var i = 0; i < amount; i++) {
+            var pos = pointOnHeart(Math.PI - 2 * Math.PI * Math.random());
+            var dir = pos.clone().length(settings.particles.velocity);
+            particles.add(
+              canvas.width / 2 + pos.x,
+              canvas.height / 2 - pos.y,
+              dir.x,
+              -dir.y
+            );
+          }
+          particles.update(deltaTime);
+          particles.draw(context, image);
+        }
+        function onResize() {
+          canvas.width = canvas.clientWidth;
+          canvas.height = canvas.clientHeight;
+        }
+        window.onresize = onResize;
+        setTimeout(function () {
+          onResize();
+          render();
+        }, 10);
+      })(document.getElementById("pinkboard"));
+ 
+    </script>
+  </body>
+</html>
